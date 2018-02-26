@@ -15,8 +15,10 @@
 
             <div class="col-md-8">
                 <div class="display">
-                    
+
                 </div>
+                <input type="number" class="form"></div>
+                
             </div>
 
         </div>
@@ -81,7 +83,7 @@
         <div class="row">
 
             <div class="col-md-3">
-                <button id="1">1</button>
+                <button id="1" onclick="inNumber()">1</button>
             </div>
 
             <div class="col-md-3">
@@ -104,10 +106,10 @@
             </div>
 
             <div class="col-md-6">
-                <button onclick="handler()" id="enter">enter</button>
+                <button onclick="arraySum(out);" id="enter">enter</button>
             </div>
         </div>
-        <input type="text" name="form"></div>
+        
 
 
     </div>

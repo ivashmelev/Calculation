@@ -29,29 +29,114 @@ var keycodes = [{id:8,name:"Backspace"},{id:9,name:"Tab"},{id:13,name:"Enter"},
 {id:188,name:","},{id:189,name:"-"},{id:190,name:"."},{id:191,name:"/"},{id:192,name:"`"},
 {id:219,name:"["},{id:220,name:"\\"},{id:221,name:"]"},{id:222,name:"'"}];
 
-other = {
-    id:98, name:"NumPad 2"
+out=[];
+
+
+
+function inNumber(){
+        
+    f1=document.getElementsByClassName("form")[0].value;
+    f1="1";
+    full=1;
+    for (var i=0; i<10; i++){
+        
+        full+=f1;
+    }
+    console.log(f1);
 }
-
-
-
-// one="none";
-// two="none";
 
 
 function keyboard(e, id, name){
     for (var i=0; i<keycodes.length; i++){
         if (e.keyCode==keycodes[i].id){
-            // console.log(keycodes[i].name);
-            display = document.getElementsByClassName("display")[0].innerHTML=keycodes[i].name;
-            // form=document.getElementsByClassName("form").value=keycodes[i].name;
-            form= document.form
-            // one.innerHTML=keycodes[i].name;
-            // two.innerHTML=keycodes[i].name;
-            console.log(display);
-            console.log(document.form);
+            // display = document.getElementsByClassName("display")[0].innerHTML=keycodes[i].name;
         }
 
     }
+
+    form=document.getElementsByClassName("form")[0].value;
+
+    switch(e.keyCode){
+
+        case 107: 
+            out.push(Number(form));
+            document.getElementsByClassName("form")[0].value="";
+            console.log(out);
+                function arraySum(out){
+                    sum = 0;
+                    for(var i = 0; i < out.length; i++){
+                        sum += out[i];
+                        }
+                    console.log(sum);
+                    }
+                arraySum(out);
+            document.getElementsByClassName("display")[0].innerHTML= sum;
+        break;
+
+        case 109:
+            out.push(Number(form));
+            document.getElementsByClassName("form")[0].value="";
+            console.log(out);
+                function arrayDifference(out){
+                    diff = 0;
+                    for(var i = 0; i < out.length; i++){
+                        diff -= out[i];
+                    }
+                    console.log(diff);
+                    }
+                arrayDifference(out);
+                    if(diff<0){
+                        document.getElementsByClassName("display")[0].innerHTML=diff;
+                    }
+                    else{
+                        document.getElementsByClassName("display")[0].innerHTML="-"+diff;
+                    }
+        break;
+
+        case 106:
+            out.push(Number(form));
+            document.getElementsByClassName("form")[0].value="";
+            console.log(out);
+                function arrayMultiplacation(out){
+                    multi = 1;
+                    for(var i = 0; i < out.length; i++){
+                        multi *= out[i];
+                    }
+                    console.log(multi);
+                    }
+                    arrayMultiplacation(out);
+                
+                document.getElementsByClassName("display")[0].innerHTML=multi;
+        break;
+
+        case 111:
+            out.push(Number(form));
+            document.getElementsByClassName("form")[0].value="";
+            console.log(out);
+                function arrayDivision(out){
+                    division = 1;
+                    for(var i = 0; i < out.length; i++){
+                        division /= out[i];
+                    }
+                    console.log(division);
+                    }
+                    arrayDivision(out);
+                
+                document.getElementsByClassName("display")[0].innerHTML=division;
+        break;
+    }
+        
 }
+
+
+// function arraySum(array){
+// sum = 0;
+// for(var i = 0; i < array.length; i++){
+//     sum += array[i];
+//     }
+// console.log(sum);
+// }
+// arraySum(out);
+
+
 addEventListener("keydown", keyboard);

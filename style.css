@@ -12,22 +12,50 @@ html {
 
 .display{
    
-    margin: 0 auto;
+    margin: 5px auto;
     padding: 0px;
     height: 50px;
-    border: 1px solid black;
+    border: 1px solid greenyellow;
     /* margin: 0px; */
     padding: 0px;
+    padding-right: 20px;
     width: 290px;
-    text-align: center;
+    text-align: right;
     font-size: 32px;
+    background-color: black;
+    color: white;
 }
 
 .container-fluid{
     display: inline-block;
     text-align: justify;
+    
 }
 
 .row{
     padding-bottom: 10px;
+    
+}
+
+.form{
+    width: 290px;
+    border: 1px solid black;
+    /* height: 25px; */
+}
+
+button{
+    background: white;
+    border: 1px solid black;
+    cursor: pointer;
+    padding: 5px 25px;
+}
+
+button:hover{
+    background: black;
+    color: white;
+}
+
+button:active{
+    background: greenyellow;
+    color: black;
 }
