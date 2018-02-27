@@ -34,15 +34,31 @@ out=[];
 
 
 function inNumber(){
-        
-    f1=document.getElementsByClassName("form")[0].value;
-    f1="1";
-    full=1;
-    for (var i=0; i<10; i++){
-        
-        full+=f1;
+    show=[];
+    // do{
+    //     if()
+    //         show.push(1);
+    for (var i=0; i<9; i++){
+   f1=document.getElementById(i).innerHTML;
+        // }while(show.length<90)
+        // console.log(f1);
+    
+    switch(f1){
+        case "1": console.log("1");
+        break;
+        case "2": console.log("2");
+        break;
     }
-    console.log(f1);
+    }
+    // alert(show.join(""));
+    // for (var i=0; i<3; i++){
+        // key1=1;
+        // key1=document.getElementById("1").innerHTML;
+        // show.push(key1);
+        // for (var i=0; i<10; i++){
+            f1=document.getElementsByClassName("form")[0].value =  show.join("");
+    // console.log(f1);
+    // }
 }
 
 

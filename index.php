@@ -17,7 +17,7 @@
                 <div class="display">
 
                 </div>
-                <input type="number" class="form"></div>
+                <input type="number" class="form" value=""></div>
                 
             </div>
 
@@ -87,7 +87,7 @@
             </div>
 
             <div class="col-md-3">
-                <button id="2">2</button>
+                <button id="2" onclick="inNumber()">2</button>
             </div>
 
             <div class="col-md-3">
